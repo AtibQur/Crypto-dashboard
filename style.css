@@ -1,0 +1,632 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* login and register */
+.wrapper {
+  transition: box-shadow .3s;
+  border-radius: 10px;
+  border: 2px solid rgb(44, 39, 39);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.5); 
+}
+.form-group {
+  padding: 10px;
+  margin: 5px;
+  color: whitesmoke;
+}
+.form-group .btn-primary {
+  background-color: rgb(59, 14, 73);
+  border: rgb(73, 14, 73);
+  opacity: 0.6;
+  transition: 0.3s;
+}
+.form-group .btn-primary:hover {
+  background-color: purple;
+  opacity: 1;
+}
+.form-group .btn-secondary {
+  background-color: rgba(128, 128, 128, 0.555);
+  border: rgba(128, 128, 128, 0.555);
+  opacity: 0.6;
+  transition: 0.3s;
+}
+.form-group .btn-secondary:hover {
+  background-color: gray;
+  opacity: 1;
+}
+.info {
+  text-align: center;
+  color: whitesmoke;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 10px;
+}
+/* End login and register */
+
+/* Header Nav-bar */
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header{
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 1.5rem;
+  background-color: white;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 5rem;
+}
+
+.nav-link{
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #475569;
+}
+
+.nav-link:hover{
+  color: #482ff7;
+}
+
+.fa-home{
+  color: rgb(175, 16, 224);
+}
+.fa-calculator{
+  color: rgb(175, 16, 224);
+}
+.fa-spotify{
+  color:rgb(175, 16, 224);
+}
+.crypto-exchange {
+  color:rgb(175, 16, 224);
+  font: normal 14px/1 FontAwesome;
+}
+.fa-sign-out {
+  color: rgb(175, 16, 224);
+}
+
+.nav-logo {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: #482ff7;
+}
+
+@media only screen and (max-width: 1050px ) {
+  .bg {
+    height: auto;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .nav-menu {
+      position: absolute;
+      left: -100%;
+      top: 10rem;
+      flex-direction: column;
+      background-color: #fff;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      background: radial-gradient(#a23982,#1f1013);;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+      z-index: 1;
+  }
+  .ul-meno.active {
+    background: radial-gradient(#a23982,#1f1013);;
+  }
+  .nav-menu.active {
+      left: 0;
+  }
+
+  .nav-item {
+      margin: 2.5rem 0;
+  }
+  .bg {
+    height: auto;
+  }
+  .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+  .navbar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        z-index: 5;
+  }
+
+  .fa-home{
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px #000000;
+    background: linear-gradient(to left, salmon 50%, lightblue 50%) right;
+    background-size: 200%;
+    transition: .4s ease-out;
+    border-radius: 5px;
+  }
+  .fa-home:hover{
+    background-position: left;
+  }
+  .fa-calculator{
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px #000000;
+    background: linear-gradient(to left, salmon 50%, lightblue 50%) right;
+    background-size: 200%;
+    transition: .4s ease-out;
+    border-radius: 5px;
+  }
+  .fa-calculator:hover{
+    background-position: left;
+  }
+  .crypto-exchange {
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px #000000;
+    background: linear-gradient(to left, salmon 50%, lightblue 50%) right;
+    background-size: 200%;
+    transition: .4s ease-out;
+    border-radius: 5px;
+  }
+  .crypto-exchange:hover{
+    background-position: left;
+  }
+  .fa-spotify{
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px #000000;
+    background: linear-gradient(to left, salmon 50%, lightblue 50%) right;
+    background-size: 200%;
+    transition: .4s ease-out;
+    border-radius: 5px;
+  }
+  .fa-spotify:hover {
+    background-position: left;
+  }
+  .fa-sign-out {
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px #000000;
+    background: linear-gradient(to left, salmon 50%, lightblue 50%) right;
+    background-size: 200%;
+    transition: .4s ease-out;
+    border-radius: 5px;
+  }
+  .fa-sign-out:hover{
+    background-position: left;
+  }
+  .valuefield{
+    text-align: center;
+  }
+  .log {
+    color: #aeaedf;
+  }
+}
+/* End Header Nav-bar */
+
+/* Dashboard items */
+.dashboard-container {
+  width: 100%;
+  height: auto;
+  padding: 0 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-flow: wrap;
+}
+.dashboard-items {
+  transition: box-shadow .4s;
+  width: 330px;
+  height: auto;
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  color: white;
+}
+.dashboard-items:hover {
+  box-shadow: 0 0 22px rgba(129, 124, 124, 0.5); 
+}
+.coin-info {
+  display: flex;
+  padding: 12px 0px;
+}
+.coin-img {
+  width: 33%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* End Dashboard items */
+
+
+/* Exchange items */
+
+.exchange-info {
+  margin-left: 20px;
+}
+.exchanges {
+  padding: 10px;
+}
+.coin-img p {
+  font-size: 12px;
+}
+/* End Exchange items */
+
+/* Animated background */
+body {
+    margin: 0;
+    height: 100vh;
+    font-weight: 100;
+    background: radial-gradient(#a23982,#1f1013);
+    -webkit-animation: fadeIn 1 1s ease-out;
+    -moz-animation: fadeIn 1 1s ease-out;
+    -o-animation: fadeIn 1 1s ease-out;
+    animation: fadeIn 1 1s ease-out;
+}
+
+.light {
+    position: absolute;
+    width: 0px;
+    opacity: .75;
+    background-color: white;
+    box-shadow: #e9f1f1 0px 0px 20px 2px;
+    opacity: 0;
+    top: 100vh;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+
+.x1{
+  -webkit-animation: floatUp 4s infinite linear;
+  -moz-animation: floatUp 4s infinite linear;
+  -o-animation: floatUp 4s infinite linear;
+  animation: floatUp 4s infinite linear;
+   -webkit-transform: scale(1.0);
+   -moz-transform: scale(1.0);
+   -o-transform: scale(1.0);
+  transform: scale(1.0);
+}
+
+.x2{
+  -webkit-animation: floatUp 7s infinite linear;
+  -moz-animation: floatUp 7s infinite linear;
+  -o-animation: floatUp 7s infinite linear;
+  animation: floatUp 7s infinite linear;
+  -webkit-transform: scale(1.6);
+  -moz-transform: scale(1.6);
+  -o-transform: scale(1.6);
+  transform: scale(1.6);
+  left: 15%;
+}
+
+.x3{
+  -webkit-animation: floatUp 2.5s infinite linear;
+  -moz-animation: floatUp 2.5s infinite linear;
+  -o-animation: floatUp 2.5s infinite linear;
+  animation: floatUp 2.5s infinite linear;
+  -webkit-transform: scale(.5);
+  -moz-transform: scale(.5);
+  -o-transform: scale(.5);
+  transform: scale(.5);
+  left: -15%;
+}
+
+.x4{
+  -webkit-animation: floatUp 4.5s infinite linear;
+  -moz-animation: floatUp 4.5s infinite linear;
+  -o-animation: floatUp 4.5s infinite linear;
+  animation: floatUp 4.5s infinite linear;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+  left: -34%;
+}
+
+.x5{
+  -webkit-animation: floatUp 8s infinite linear;
+  -moz-animation: floatUp 8s infinite linear;
+  -o-animation: floatUp 8s infinite linear;
+  animation: floatUp 8s infinite linear;
+  -webkit-transform: scale(2.2);
+  -moz-transform: scale(2.2);
+  -o-transform: scale(2.2);
+  transform: scale(2.2);
+  left: -57%;
+}
+
+.x6{
+  -webkit-animation: floatUp 3s infinite linear;
+  -moz-animation: floatUp 3s infinite linear;
+  -o-animation: floatUp 3s infinite linear;
+  animation: floatUp 3s infinite linear;
+  -webkit-transform: scale(.8);
+  -moz-transform: scale(.8);
+  -o-transform: scale(.8);
+  transform: scale(.8);
+  left: -81%;
+}
+
+.x7{
+  -webkit-animation: floatUp 5.3s infinite linear;
+  -moz-animation: floatUp 5.3s infinite linear;
+  -o-animation: floatUp 5.3s infinite linear;
+  animation: floatUp 5.3s infinite linear;
+  -webkit-transform: scale(3.2);
+  -moz-transform: scale(3.2);
+  -o-transform: scale(3.2);
+  transform: scale(3.2);
+  left: 37%;
+}
+
+.x8{
+  -webkit-animation: floatUp 4.7s infinite linear;
+  -moz-animation: floatUp 4.7s infinite linear;
+  -o-animation: floatUp 4.7s infinite linear;
+  animation: floatUp 4.7s infinite linear;
+  -webkit-transform: scale(1.7);
+  -moz-transform: scale(1.7);
+  -o-transform: scale(1.7);
+  transform: scale(1.7);
+  left: 62%;
+}
+
+.x9{
+  -webkit-animation: floatUp 4.1s infinite linear;
+  -moz-animation: floatUp 4.1s infinite linear;
+  -o-animation: floatUp 4.1s infinite linear;
+  animation: floatUp 4.1s infinite linear;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+  left: 85%;
+}
+
+button:focus{
+  outline: none;
+}
+
+@-webkit-keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+@-moz-keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+@-o-keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+@keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+
+@-webkit-keyframes fadeIn{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@-moz-keyframes fadeIn{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@-o-keyframes fadeIn{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@keyframes fadeIn{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@-webkit-keyframes fadeOut{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 0;}
+}
+
+@-moz-keyframes fadeOut{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 0;}
+}
+
+@-o-keyframes fadeOut{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 0;}
+}
+
+@keyframes fadeOut{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 0;}
+}
+
+@-webkit-keyframes finalFade{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 1;}
+}
+
+@-moz-keyframes finalFade{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 1;}
+}
+
+@-o-keyframes finalFade{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 1;}
+}
+
+@keyframes finalFade{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 1;}
+}
+/* End Animated background */
+
+
+/* Calculator */
+.title{
+  width:100%;
+  font-size: 25px;
+  color: whitesmoke;
+}
+
+.calculator-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  height: 100%;
+  padding: 0 15%;
+}
+.calculator {
+  transition: box-shadow .4s;
+  border: 2px solid whitesmoke;
+  padding: 40px;
+  border-radius: 5px;
+}
+.calculator:hover {
+  box-shadow: 0 0 22px rgba(129, 124, 124, 0.5); 
+}
+
+.calculatorbox{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.calculatorbox .item select{  
+  padding: 3px;
+  cursor:pointer;
+  color:whitesmoke;
+  background:#9982c2;
+  outline: none;
+}
+
+.calcoption{
+  font-size: 18px; 
+  color:whitesmoke;
+  background:#9982c2;
+}
+.crytoselect {
+  margin-right: 15px;
+}
+.valuefield{
+  padding: 5px;
+  font-weight:bold;
+  color:whitesmoke;
+  background:#9982c2;
+  border: #9982c2;
+  margin: 5px;
+  outline: none;
+}
+
+/* For Firefox */
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+/* Webkit browsers like Safari and Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* End Calculator */
+.log {
+  font-size: 14px;
+  font-weight: bold;
+}
